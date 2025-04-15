@@ -1,2 +1,2 @@
 server:
-  port: 8080spring.profiles.active=${CONFIG_ENVIRONMENT:local}
+  port: 8080
