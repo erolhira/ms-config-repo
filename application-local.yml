@@ -1,4 +1,8 @@
 # common properties for local env
+
+server:
+  port: 8080
+
 eureka:
   client:
     serviceUrl:

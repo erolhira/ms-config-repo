@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        notificationConsumer-in-0:
+          destination: ms-demo-s2s-topic
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: ${KAFKA_BROKER_URL:localhost:9092}
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
