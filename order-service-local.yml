@@ -1,0 +1,44 @@
+server:
+  port: 8040
+
+spring:
+  datasource:
+    username: ${DATASOURCE_USERNAME:ms_demo_local}
+    password: ${DATASOURCE_PASSWORD:ms_demo_local}
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5430/ms_demo_local}
+  cloud:
+    stream:
+      bindings:
+        notificationProducer-out-0:
+          destination: ms-demo-s2s-topic
+      kafka:
+        binder:
+          #brokers: kafka-ms-demo:29092
+          autoCreateTopics: true
+          brokers: ${KAFKA_BROKER_URL:localhost:9092}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8010/eureka/}
+
+management:
+  server:
+    port: 8081
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    env:
+      show-values: always
+    health:
+      show-details: ALWAYS
+  info:
+    env:
+      enabled: true
+
+test: abc
