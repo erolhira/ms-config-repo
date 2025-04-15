@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: ${DATASOURCE_USERNAME:ms_demo_local}
+    password: ${DATASOURCE_PASSWORD:ms_demo_local}
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5430/ms_demo_local}
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
