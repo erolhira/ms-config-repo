@@ -17,11 +17,6 @@ spring:
           autoCreateTopics: true
           brokers: ${KAFKA_BROKER_URL:localhost:9092}
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8010/eureka/}
-
 management:
   server:
     port: 8081

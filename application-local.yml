@@ -1,0 +1,5 @@
+# common properties for local env
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8010/eureka/}
