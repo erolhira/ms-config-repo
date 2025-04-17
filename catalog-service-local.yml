@@ -4,6 +4,9 @@ spring:
     password: ${DATASOURCE_PASSWORD:ms_demo_local}
     url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5430/ms_demo_local}
 
+elasticsearch:
+  url: ${ELASTICSEARCH_URL:http://elastic-ms-demo:9200}
+
 management:
   tracing:
     sampling:
